@@ -10,7 +10,7 @@ A simple python script with no GUI to help monitor the state of your battery and
 ## python version
 3.10
 
--TO run app via terminal:
+-To run app in terminal:
 `$ python3 battery_notifier.py`
 
 ## Live link
